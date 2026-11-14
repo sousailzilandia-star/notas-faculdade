@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notas da Facul</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= TELA INICIAL (DESLOGADO) ================= -->
+  <div class="auth-shell" id="auth-view">
+    <div class="auth-card">
+      <h1>Notas da Facul</h1>
+      <p class="auth-sub">Entre para acompanhar suas notas e médias.</p>
+      <button type="button" class="primary-btn full" id="open-login">Entrar</button>
+      <button type="button" class="ghost-btn full" id="open-signup">Criar conta</button>
+      <p class="auth-status" id="auth-status" hidden></p>
+    </div>
+  </div>
+
+  <!-- ================= APP (SÓ APARECE LOGADO) ================= -->
+  <div class="app" id="app-view" hidden>
+    <header class="top">
+      <div>
+        <h1>Notas da Facul</h1>
+        <p>Lance os pontos de cada prova e veja a soma e o % atingido na hora.</p>
+      </div>
+      <div class="account-box">
+        <span id="account-email"></span>
+        <button type="button" class="link-btn" id="logout-btn">Sair</button>
+      </div>
+    </header>
+
+    <p class="sync-note" id="sync-note" hidden></p>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="historico" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
+        Histórico de Provas
+      </button>
+      <button class="tab" data-tab="geral" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+        Notas Geral
+      </button>
+    </nav>
+
+    <section class="panel" id="panel-historico"></section>
+    <section class="panel" id="panel-geral" hidden></section>
+  </div>
+
+  <!-- Netlify Identity: login/cadastro prontos, sem precisar de outra conta -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

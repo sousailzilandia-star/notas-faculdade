@@ -1,0 +1,9 @@
+{
+  "name": "notas-facul-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Calculadora de notas da facul com login (Netlify Identity) e notas salvas por pessoa (Netlify Blobs).",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
